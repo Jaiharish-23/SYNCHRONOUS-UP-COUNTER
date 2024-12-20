@@ -74,8 +74,10 @@ endmodule
 
 
 **TIMING DIAGRAM FOR IP COUNTER**
+![image](https://github.com/user-attachments/assets/04a77b05-46e9-4d84-be7b-649a93def770)
 
 **TRUTH TABLE**
+![397677631-30c41e6b-52d3-406d-987c-62284abf02f3](https://github.com/user-attachments/assets/c6889cbb-fcf0-4650-9a79-0227085305b5)
 
 **RESULTS**
 The observation of the simulation results and confirm the successful execution of the program.
