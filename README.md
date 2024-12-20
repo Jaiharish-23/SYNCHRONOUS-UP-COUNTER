@@ -46,8 +46,23 @@ Step 6: Open in RTL viewers to get RTL diagram output
 Developed by: JAI HARISH R 
 RegisterNumber:24006817
 */
+```
+module SYNCHRONOUS_UP_COUNTER(out,clk,rstn);
+input clk,rstn;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(!rstn)
+     out<=0;
+   else 
+     out <= out+1;
+end
+endmodule
+```
 
 **RTL LOGIC UP COUNTER**
+![{E0608F9B-5AF4-4D17-A72C-C6D2069B18DD}](https://github.com/user-attachments/assets/03046879-a9c7-4dde-9fe2-80b79a5cf1fa)
+
 
 **TIMING DIAGRAM FOR IP COUNTER**
 
