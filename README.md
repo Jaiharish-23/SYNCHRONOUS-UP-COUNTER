@@ -47,21 +47,30 @@ Developed by: JAI HARISH R
 RegisterNumber:24006817
 */
 ```
-module SYNCHRONOUS_UP_COUNTER(out,clk,rstn);
-input clk,rstn;
-output reg [3:0]out;
-always @ (posedge clk)
+module SYNCHRONOUS_UP_COUNTER(clk, rst, q);
+ input clk;
+ input rst;
+ output [3:0]q;
+reg [3:0]q;
+reg [3:0]x=0;
+always @ (posedge(clk) or posedge(rst))
 begin
-   if(!rstn)
-     out<=0;
-   else 
-     out <= out+1;
+if (rst==1'b1)
+begin
+q=4'b0;
+end
+else
+begin
+x=x+1'b1;
+end
+q=x;
 end
 endmodule
 ```
 
 **RTL LOGIC UP COUNTER**
-![{E0608F9B-5AF4-4D17-A72C-C6D2069B18DD}](https://github.com/user-attachments/assets/03046879-a9c7-4dde-9fe2-80b79a5cf1fa)
+![{EC88DE7D-53CE-4BEC-AACE-3E2AC0976C27}](https://github.com/user-attachments/assets/c2dd2b42-f7ac-4f53-9f67-b1a45916653e)
+
 
 
 **TIMING DIAGRAM FOR IP COUNTER**
